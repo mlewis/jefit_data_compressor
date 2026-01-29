@@ -1,11 +1,15 @@
-import streamlit as st
-import pandas as pd
 import io
+
+import pandas as pd
+import streamlit as st
 
 # --- APP CONFIG ---
 st.set_page_config(page_title="Jefit Data Optimizer", page_icon="🏋️")
 st.title("🏋️ Jefit Workout Optimizer")
-st.write("Upload your `jefit.csv` to get an AI-ready compressed text format.")
+st.write("On Desktop go to https://www.jefit.com/my-jefit/settings.")
+st.write("Click the tab for \"Data Control\"")
+st.write("Click the button Export Data")
+st.write("Upload that file here")
 
 uploaded_file = st.file_uploader("Choose your Jefit CSV file", type="csv")
 months_to_keep = st.sidebar.slider("Months of history to keep", 1, 36, 12)
